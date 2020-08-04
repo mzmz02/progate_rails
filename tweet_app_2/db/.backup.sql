@@ -1,0 +1,17 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY);
+INSERT INTO schema_migrations VALUES('20170512024421');
+CREATE TABLE IF NOT EXISTS "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL);
+INSERT INTO ar_internal_metadata VALUES('environment','development','2017-05-12 02:44:26.268623','2017-05-12 02:44:26.268623');
+CREATE TABLE IF NOT EXISTS "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL);
+INSERT INTO posts VALUES(1,'aaa','2020-07-14 14:30:47.677108','2020-07-14 14:30:47.677108');
+INSERT INTO posts VALUES(2,'aaaaaa','2020-07-14 14:46:06.992993','2020-07-14 14:46:06.992993');
+INSERT INTO posts VALUES(3,'aaaaaaaaaaaj','2020-07-14 15:04:16.456549','2020-07-14 15:30:53.659126');
+INSERT INTO posts VALUES(4,'aaaaaaaaaaa','2020-07-14 15:04:18.470990','2020-07-14 15:04:18.470990');
+INSERT INTO posts VALUES(5,'aaaaaaaaaaa','2020-07-14 15:04:19.576238','2020-07-14 15:04:19.576238');
+INSERT INTO posts VALUES(6,'aaaaaaaaaaa','2020-07-14 15:04:20.362727','2020-07-14 15:04:20.362727');
+INSERT INTO posts VALUES(8,'o','2020-07-14 15:06:43.619887','2020-07-14 15:31:10.776112');
+DELETE FROM sqlite_sequence;
+INSERT INTO sqlite_sequence VALUES('posts',8);
+COMMIT;
