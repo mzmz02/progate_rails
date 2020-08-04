@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.3'
+gem 'rails'
 # Use Puma as the app server
 gem 'puma', '3.6.2'
 # Use SCSS for stylesheets
