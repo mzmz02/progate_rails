@@ -88,7 +88,8 @@ GEM
       method_source (~> 1.0)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
-    puma (3.6.2)
+    puma (4.3.5)
+      nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -174,7 +175,7 @@ DEPENDENCIES
   jquery-rails (= 4.2.2)
   listen (= 3.0.8)
   pry-rails (= 0.3.4)
-  puma (= 3.6.2)
+  puma
   rails
   sass-rails (= 5.0.6)
   spring (= 2.0.1)
